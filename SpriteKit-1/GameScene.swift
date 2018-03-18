@@ -13,6 +13,21 @@ class GameScene: SKScene {
     
   
     override func didMove(to view: SKView) {
+        
+        // Adding ship from a Assets folder (png image)
+        let ship: SKSpriteNode = SKSpriteNode(imageNamed: "spaceship")
+        ship.xScale = 0.25
+        ship.yScale = 0.25
+        self.addChild(ship)
+        
+        // Modifing ship that's in the Scene already
+        // gettin access to it and scaling
+        let shipInScene: SKSpriteNode = self.childNode(withName: "shipInScene") as! SKSpriteNode
+        
+        shipInScene.xScale = 0.1
+        shipInScene.yScale = 0.1
+        
+        
     
     }
     
